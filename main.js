@@ -40,6 +40,21 @@ const data = [
             { answer: "Vincent Van Gogh", isCorrect: false },
             { answer: "Gustav Klimt", isCorrect: false },
             { answer: "Leonardo Da Vinchi", isCorrect: true },
-        ]
+        ],
     },
-]
+];
+
+const gameScreen = document.querySelector(".game");
+const resultScreen = document.querySelector(".result");
+const question = document.querySelector(".question");
+const answers = document.querySelector(".answers");
+const submit = document.querySelector(".submit");
+const play = document.querySelector(".play");
+
+let qIndex = 0;
+let correctCount = 0;
+let wrongCount = 0;
+let total = 0;
+let selectedAnswer = 0;
+
+
