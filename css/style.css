@@ -1,17 +1,69 @@
-/* Error: This file is already being loaded.
- *   ,
- * 5 | @import "";
- *   |         ^^
- *   '
- *   sass\main.scss 5:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: This file is already being loaded.\a   \2577 \a 5 \2502  @import "";\d\a   \2502          ^^\a   \2575 \a   sass\\main.scss 5:9  root stylesheet';
+body {
+  background-color: #22223b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
 }
+
+.game {
+  display: none;
+}
+.game__content {
+  padding: 3rem;
+}
+.game__content--question {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+.game__content--answers__answer {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.submit {
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+
+.result {
+  padding: 5.5rem;
+  text-align: center;
+}
+.result h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.result__correct {
+  color: green;
+  margin-bottom: 0.9rem;
+}
+.result__wrong {
+  color: red;
+  margin-bottom: 0.9rem;
+}
+.result__play {
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.container {
+  width: 38rem;
+  height: 24rem;
+  background-color: white;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

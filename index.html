@@ -5,10 +5,47 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Quiz app</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
+    <section class="container">
+        <article class="game">
+            <div class="game__content">
+                <h1 class="game__content--question">Which of these fish is actually a fish?</h1>
+                <div class="game__content--answers">
+                    <div class="game__content--answers__answer">
+                        <input name="answer" type="radio" id="answer1" value="false">
+                        <label for="answer1">Answer1</label>
+                    </div>
+                    <div class="game__content--answers__answer">
+                        <input name="answer" type="radio" id="answer2" value="false">
+                        <label for="answer2">Answer2</label>
+                    </div>
+                    <div class="game__content--answers__answer">
+                        <input name="answer" type="radio" id="answer3" value="false">
+                        <label for="answer3">Answer3</label>
+                    </div>
+                    <div class="game__content--answers__answer">
+                        <input name="answer" type="radio" id="answer4" value="false">
+                        <label for="answer4">Answer4</label>
+                    </div>
+                </div>
+            </div>
+            <button class="submit">Submit</button>
+        </article>
+
+        <article class="result">
+            <h1>Congratulations!</h1>
+            <h3 class="result__correct">Correct Answers: 0</h3>
+            <h3 class="result__wrong">Wrong Answers: 0</h3>
+            <h2 class="result__score">Score: -30</h2>
+            <button class="result__play">Play again</button>
+        </article>
+    </section>
     <script src='main.js'></script>
 </body>
 </html>

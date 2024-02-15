@@ -1,0 +1,63 @@
+.game {
+    display: none;
+
+    &__content {
+        padding: 3rem;
+
+        &--question {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        &--answers {
+
+            &__answer {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                color: #333;
+            } 
+        }
+    }
+}
+
+.submit {
+    background-color: rebeccapurple;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+}
+
+.result {
+    // display: none;
+    padding: 5.5rem;
+    text-align: center;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__correct {
+        color: green;
+        margin-bottom: .9rem;
+    }
+
+    &__wrong {
+        color: red;
+        margin-bottom: .9rem;
+    }
+
+    &__play {
+        background-color: rebeccapurple;
+        color: white;
+        border: none;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        margin-top: 2rem;
+    }
+}
+
