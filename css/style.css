@@ -7,9 +7,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.game {
-  display: none;
-}
 .game__content {
   padding: 3rem;
 }
@@ -35,6 +32,7 @@ body {
 }
 
 .result {
+  display: none;
   padding: 5.5rem;
   text-align: center;
 }

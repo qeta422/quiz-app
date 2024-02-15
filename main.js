@@ -46,10 +46,10 @@ const data = [
 
 const gameScreen = document.querySelector(".game");
 const resultScreen = document.querySelector(".result");
-const question = document.querySelector(".question");
-const answers = document.querySelector(".answers");
+const question = document.querySelector(".game__content--question");
+const answers = document.querySelector(".game__content--answers");
 const submit = document.querySelector(".submit");
-const play = document.querySelector(".play");
+const play = document.querySelector(".result__play");
 
 let qIndex = 0;
 let correctCount = 0;
@@ -57,4 +57,17 @@ let wrongCount = 0;
 let total = 0;
 let selectedAnswer = 0;
 
+const showQuestion = (qNumber) => {
+    question.textContent = data[qNumber].question
+    answers.innerHTML = data[qNumber].answers.map((item, index) =>
+        `
+        <div class="game__content--answers__answer">
+            <input name="answer" type="radio" id= ${index} value=${item.isCorrect}>
+            <label for= ${index}>${item.answer}</label>
+        </div>
+        `
+    ).join("");
+};
+
+showQuestion(qIndex);
 
