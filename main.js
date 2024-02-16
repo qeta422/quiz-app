@@ -57,8 +57,17 @@ let wrongCount = 0;
 let total = 0;
 let selectedAnswer = 0;
 
+const showResult = () => {
+    resultScreen.style.display = 'block';
+    gameScreen.style.display = 'none';
+}
+
 const showQuestion = (qNumber) => {
-    question.textContent = data[qNumber].question
+    if (qIndex == data.length) {
+        return showResult();
+    }
+    selectedAnswer = null;
+    question.textContent = data[qNumber].question; 
     answers.innerHTML = data[qNumber].answers.map((item, index) =>
         `
         <div class="game__content--answers__answer">
@@ -67,7 +76,30 @@ const showQuestion = (qNumber) => {
         </div>
         `
     ).join("");
+
+    selectAnswer();
+};
+
+const selectAnswer = () => {
+    answers.querySelectorAll("input").forEach(el => {
+        el.addEventListener("click", (e) => {
+            selectedAnswer = e.target.value;
+        });
+    });
+};
+
+const submitAnswer = () => {
+    submit.addEventListener('click', () => {
+        if (selectedAnswer !== null) {
+            selectedAnswer === 'true' ? correctCount++ : wrongCount++;
+            qIndex++;
+            showQuestion(qIndex);
+        }
+        else {
+            alert('please select an answer');
+        }
+    });
 };
 
 showQuestion(qIndex);
-
+submitAnswer();
