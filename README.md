@@ -1,2 +1,2 @@
 # quiz-app
-A quiz web application project built with JavaScript
+A simple quiz web application project built with JavaScript EventListeners and functions
