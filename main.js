@@ -60,6 +60,15 @@ let selectedAnswer = 0;
 const showResult = () => {
     resultScreen.style.display = 'block';
     gameScreen.style.display = 'none';
+
+    resultScreen.querySelector(".result__correct").textContent =
+    `Correct Answers: ${correctCount}`;
+
+    resultScreen.querySelector(".result__wrong").textContent =
+    `Wrong Answers: ${wrongCount}`;
+
+    resultScreen.querySelector(".result__score").textContent =
+    `Total Score: ${(correctCount - wrongCount) * 10}`;
 }
 
 const showQuestion = (qNumber) => {
