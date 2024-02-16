@@ -55,7 +55,21 @@ let qIndex = 0;
 let correctCount = 0;
 let wrongCount = 0;
 let total = 0;
-let selectedAnswer = 0;
+let selectedAnswer;
+
+const playAgain = () => {
+    qIndex = 0;
+    correctCount = 0;
+    wrongCount = 0;
+    total = 0;
+    showQuestion(qIndex);
+};
+
+play.addEventListener('click', () => {
+    resultScreen.style.display = 'none';
+    gameScreen.style.display = 'block';
+    playAgain();
+})
 
 const showResult = () => {
     resultScreen.style.display = 'block';
